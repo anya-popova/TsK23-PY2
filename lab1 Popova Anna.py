@@ -24,6 +24,10 @@ class Table:
 
         :raise TypeError: Если высота стола не int или float, то вызываем ошибку
         :raise ValueError: Если стол заданной высоты существовать не может, вызываем ошибку
+
+        Пример:
+        >>> table = Table(150.1, "Дерево")
+        >>> table.height_real(150.1)
         """
         if not isinstance(height, (int, float)):
             raise TypeError("Высота должна быть типа int или float")
@@ -35,6 +39,10 @@ class Table:
         """
         Функкция, которая определяет плотность материала
         :param material: Материал, из которого изготовлен стол
+
+        Пример:
+        >>> table = Table(150.1, "Дерево")
+        >>> table.height_real(150.1)
         """
         ...
 
@@ -60,6 +68,10 @@ class User:
         :param age: Введённый возраст пользователя
 
         :raise ValueError: Если возраст введён неверно, то вызываем ошибку
+
+        Пример:
+        >>> user = User("Nick", 17)
+        >>> user.age_real(17)
         """
         if not isinstance(age, int):
             raise TypeError("Возраст должен быть целым числом")
@@ -69,6 +81,10 @@ class User:
         """
         Функкция, которая определяет возрастную категорию пользователя
         :param age: Введённый возраст пользователя
+
+        Пример:
+        >>> user = User("Nick", 17)
+        >>> user.age_category(17)
         """
         ...
 
@@ -93,6 +109,10 @@ class Magazine:
         """
         Функкция, которая проверяет, существующий ли номер сезона введён
         :param season: Номер сезона
+
+        Пример:
+        >>> magazine = Magazine(4, 21)
+        >>> magazine.init_season(4)
         """
         ...
 
@@ -100,6 +120,10 @@ class Magazine:
         """
         Функкция, которая проверяет, верно ли введено количество страниц
         :param pages: Количество страниц в журнале
+
+        Пример:
+        >>> magazine = Magazine(4, 21)
+        >>> magazine.init_pages(21)
         """
         ...
 
